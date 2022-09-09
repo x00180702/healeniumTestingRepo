@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>bloodPressureSeleniumTesting</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <maven-surefire.version>2.19.1</maven-surefire.version>
+    <surefire.forkCount>4</surefire.forkCount>
+    <surefire.threadCount>1</surefire.threadCount>
+    <surefire.reuseForks>false</surefire.reuseForks>
+    <geb.test.include></geb.test.include>
+    <geb.text.exclude></geb.text.exclude>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.6.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M4</version>
+        </dependency>
+        <!-- https://search.maven.org/artifact/io.cucumber/cucumber-java/7.4.1/jar -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.5.0</version>
+        </dependency>
+
+        <!-- https://search.maven.org/artifact/io.cucumber/cucumber-junit/7.4.1/jar -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.5.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-groovy</artifactId>
+            <version>6.10.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M7</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <!--suppress UnresolvedMavenProperty -->
+            <version>${maven-surefire.version}</version>
+            <configuration>
+                <parallel>classes</parallel>
+                <forkCount>${surefire.forkCount}</forkCount>
+                <threadCount>${surefire.threadCount}</threadCount>
+                <reuseForks>${surefire.reuseForks}</reuseForks>
+                <failIfNoTests>false</failIfNoTests>
+                <systemPropertyVariables>
+                    <!--<geb.build.baseUrl>${geb.test.baseUrl}</geb.build.baseUrl> -->
+                    <geb.build.reportsDir>target/test-reports/geb</geb.build.reportsDir>
+                    <geb.env>chrome</geb.env>
+                    <geb.firefoxBinary></geb.firefoxBinary>
+                    <geb.chromeBinary></geb.chromeBinary>
+                    <geb.os.name>win</geb.os.name>
+                    <geb.defaultTimeout>120</geb.defaultTimeout>
+                    <xvfb.screen>${xvfb.screen}</xvfb.screen>
+                </systemPropertyVariables>
+                <includes>
+                    <include>${geb.test.include}</include>
+                </includes>
+                <excludes>
+                    <exclude>${geb.test.exclude}</exclude>
+                </excludes>
+                <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
+
+</project>
