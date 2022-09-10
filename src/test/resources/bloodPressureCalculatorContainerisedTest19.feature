@@ -1,4 +1,4 @@
-@smokeTest
+@bpcTest
 Feature: Boundary Value Analysis Testing
 
   Scenario Outline: Test Case 19

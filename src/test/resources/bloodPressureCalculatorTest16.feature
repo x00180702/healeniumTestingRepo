@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Invalid (char) values
 
   Scenario: Test Case 16

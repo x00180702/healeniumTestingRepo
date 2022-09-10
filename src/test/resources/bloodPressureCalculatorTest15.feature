@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Invalid (double) values
 
   Scenario: Test Case 15

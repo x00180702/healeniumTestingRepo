@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: High Blood Pressure
 
   Scenario: Test Case 4

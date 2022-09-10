@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Multiple Scenarios in 1 Script
 
   Scenario: Multi-Test Case 1

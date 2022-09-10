@@ -1,4 +1,4 @@
-@smokeTest1
+@bpcTest
 Feature: Equal Values Error
 
   Scenario: Test Case 5

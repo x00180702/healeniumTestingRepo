@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Ideal Blood Pressure
 
   Scenario: Test Case 3

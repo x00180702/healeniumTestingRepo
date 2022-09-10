@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Check using scenario outline - Negative Test
 
   Scenario Outline: Test Case 18

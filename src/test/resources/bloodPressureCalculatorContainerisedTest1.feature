@@ -1,4 +1,4 @@
-@smokeTest1
+@bpcTest
 Feature: Low Blood Pressure
 
   Scenario: Test Case 1

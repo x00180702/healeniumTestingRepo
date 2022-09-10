@@ -1,4 +1,4 @@
-@smokeTest
+@bpcTest
 Feature: Check All Results
 
   Scenario: Test Case 14

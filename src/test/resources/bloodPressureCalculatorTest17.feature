@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Check using scenario outline
 
   Scenario Outline: Test Case 17

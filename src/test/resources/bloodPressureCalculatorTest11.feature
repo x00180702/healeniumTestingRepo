@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Out of range age value
 
   Scenario: Test Case 11

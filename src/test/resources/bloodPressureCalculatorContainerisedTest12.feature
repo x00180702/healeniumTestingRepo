@@ -1,4 +1,4 @@
-@smokeTest
+@bpcTest
 Feature: Check Mean Arterial Pressure
 
   Scenario: Test Case 12

@@ -1,4 +1,4 @@
-@smokeTest
+@bpcTest
 Feature: Empty Age field
 
   Scenario: Test Case 10

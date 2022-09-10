@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Check Pulse Pressure
 
   Scenario: Test Case 13
