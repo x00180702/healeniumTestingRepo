@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Empty Field
 
   Scenario: Test Case 7

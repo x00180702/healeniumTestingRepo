@@ -1,9 +1,9 @@
-@smokeTest
+@bpTest
 Feature: Out of range age value
 
   Scenario: Test Case 11
 
-    Given user goes to the 'Blood Pressure' application
+    Given user goes to the "Blood Pressure" application
     When user enters "200" in the Systolic field on the 'Blood Pressure' calculator page
     When user enters "200" in the Diastolic field on the 'Blood Pressure' calculator page
     When user enters "101" in the Age field on the 'Blood Pressure' calculator page

@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Check Privacy Hyperlink
 
   Scenario: Test Case 9

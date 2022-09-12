@@ -1,9 +1,9 @@
-@smokeTest
+@bpTest
 Feature: Invalid (char) values
 
   Scenario: Test Case 16
 
-    Given user goes to the 'Blood Pressure' application
+    Given user goes to the "Blood Pressure" application
     When user enters "e" in the Systolic field on the 'Blood Pressure' calculator page
     When user enters "e" in the Diastolic field on the 'Blood Pressure' calculator page
     When user enters "e" in the Age field on the 'Blood Pressure' calculator page

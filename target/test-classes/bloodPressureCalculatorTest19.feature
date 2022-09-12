@@ -1,9 +1,9 @@
-@smokeTest
+@bpTest
 Feature: Boundary Value Analysis Testing
 
   Scenario Outline: Test Case 19
 
-    Given user goes to the 'Blood Pressure' application
+    Given user goes to the "Blood Pressure" application
     When user enters "<Systolic>" in the Systolic field on the 'Blood Pressure' calculator page
     And user enters "<Diastolic>" in the Diastolic field on the 'Blood Pressure' calculator page
     And user enters "<AgeValue>" in the Age field on the 'Blood Pressure' calculator page

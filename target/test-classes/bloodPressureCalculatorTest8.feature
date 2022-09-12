@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Check Privacy Tab
 
   Scenario: Test Case 8

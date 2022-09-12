@@ -1,4 +1,4 @@
-@smokeTest
+@bpTest
 Feature: Out of range values
 
   Scenario: Test Case 6
