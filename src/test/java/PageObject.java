@@ -9,12 +9,9 @@ public class PageObject {
     protected static WebDriver driver;
 
     public PageObject(WebDriver driver){
-       // this.driver = driver;
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
-        WebDriverManager.chromedriver().setup();
+       this.driver = driver;
+
+
 
         //driver.manage().window().maximize();
         PageFactory.initElements(driver, this);

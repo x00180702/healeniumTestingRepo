@@ -9,7 +9,7 @@ import org.testng.annotations.AfterSuite;
         monochrome = true,
         plugin = {"pretty", "html:target/cucumber-html-report"},
         features="src/test/resources/",
-        tags= "@smokeTest11")
+        tags= "@sm1")
 
 class CucumberRunner {
 @BeforeClass

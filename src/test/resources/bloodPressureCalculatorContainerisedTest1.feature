@@ -1,4 +1,4 @@
-@bpcTest
+@bpcTest @sm1
 Feature: Low Blood Pressure
 
   Scenario: Test Case 1

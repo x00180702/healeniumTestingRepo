@@ -1,11 +1,15 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 
 import java.util.Objects;
 
 class TestPlan {
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver;
+
+
 
     WebForm webForm;
 
@@ -18,6 +22,10 @@ class TestPlan {
     @BeforeTest(alwaysRun = true)
     public void submitForm(String bpOrbpc) {
         driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless");
         if(bpOrbpc.equals("Blood Pressure")){
           driver.get(Utils.BASE_URL);
         }else {
