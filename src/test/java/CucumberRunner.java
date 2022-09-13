@@ -1,7 +1,9 @@
 import io.cucumber.junit.CucumberOptions;
+
 import io.cucumber.junit.Cucumber;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+
 import org.testng.annotations.AfterSuite;
 
 @RunWith(Cucumber.class)
@@ -9,7 +11,7 @@ import org.testng.annotations.AfterSuite;
         monochrome = true,
         plugin = {"pretty", "html:target/cucumber-html-report"},
         features="src/test/resources/",
-        tags= "@sm1")
+        tags= "@test1")
 
 class CucumberRunner {
 @BeforeClass

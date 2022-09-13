@@ -1,4 +1,4 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,8 +9,6 @@ import java.util.Objects;
 class TestPlan {
     WebDriver driver;
 
-
-
     WebForm webForm;
 
     @BeforeSuite
@@ -19,21 +17,18 @@ class TestPlan {
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
-    @BeforeTest(alwaysRun = true)
+
+
     public void submitForm(String bpOrbpc) {
         driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
         if(bpOrbpc.equals("Blood Pressure")){
           driver.get(Utils.BASE_URL);
         }else {
          driver.get(Utils.BASE_URL1);
         }
 
-        //driver.get(Utils.BASE_URL);
-        webForm = new WebForm(driver);
+
+      //  webForm = new WebForm(driver);
         driver.manage().window().maximize();
     }
 
@@ -67,7 +62,7 @@ class TestPlan {
     @AfterTest(alwaysRun = true)
     public void cleanUp() {
         System.out.println("TEST IS OVER!");
-        WebForm.driver.quit();
+//        WebForm.driver.quit();
     }
 
     public void clearSystolic() {
