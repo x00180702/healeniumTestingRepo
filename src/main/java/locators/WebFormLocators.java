@@ -51,10 +51,10 @@ public class WebFormLocators {
     @FindBy(xpath="//label[@name='AgeResults']")
     public WebElement getAgeCalculation;
 
-    @FindBy(xpath="//label[@id='mapResults']")
+    @FindBy(xpath="//label[@name='mapResults']")
     public WebElement getMAPValue;
 
-    @FindBy(xpath="//label[@id='ppResults']")
+    @FindBy(xpath="//label[@name='ppResults']")
     public WebElement getPPValue;
 
     @FindBy(xpath="//div[@name='error']")
