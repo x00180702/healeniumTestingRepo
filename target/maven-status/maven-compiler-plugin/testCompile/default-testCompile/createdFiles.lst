@@ -1,5 +1,1 @@
-Utils.class
-TestPlan.class
-PageObject.class
-WebForm.class
-CucumberRunner.class
+Pages/PageObject.class

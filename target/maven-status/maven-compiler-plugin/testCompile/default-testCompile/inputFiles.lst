@@ -1,5 +1,1 @@
-/home/jgunter/IdeaProjects/bloodPressureSeleniumTesting/src/test/java/TestPlan.java
-/home/jgunter/IdeaProjects/bloodPressureSeleniumTesting/src/test/java/Utils.java
-/home/jgunter/IdeaProjects/bloodPressureSeleniumTesting/src/test/java/WebForm.java
-/home/jgunter/IdeaProjects/bloodPressureSeleniumTesting/src/test/java/PageObject.java
-/home/jgunter/IdeaProjects/bloodPressureSeleniumTesting/src/test/java/CucumberRunner.java
+/home/jgunter/IdeaProjects/bloodPressureSeleniumTesting/src/test/java/Pages/PageObject.java

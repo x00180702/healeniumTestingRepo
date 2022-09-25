@@ -8,91 +8,172 @@
     <artifactId>bloodPressureSeleniumTesting</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <maven-surefire.version>2.19.1</maven-surefire.version>
-    <surefire.forkCount>4</surefire.forkCount>
-    <surefire.threadCount>1</surefire.threadCount>
-    <surefire.reuseForks>false</surefire.reuseForks>
-    <geb.test.include></geb.test.include>
-    <geb.text.exclude></geb.text.exclude>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-server</artifactId>
-            <version>3.141.59</version>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.3.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M6</version>
-        </dependency>
-        <!-- https://search.maven.org/artifact/io.cucumber/cucumber-java/7.4.1/jar -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.5.0</version>
-        </dependency>
 
-        <!-- https://search.maven.org/artifact/io.cucumber/cucumber-junit/7.4.1/jar -->
+    <dependencies>
+        <!-- Cucumber Dependencies -->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>7.5.0</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <artifactId>gherkin</artifactId>
+            <version>24.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-groovy</artifactId>
             <version>6.10.4</version>
+            <scope>compile</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.8.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
+            <version>7.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>7.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.7.2</version>
+        </dependency>
+
+
+        <!-- Junit Dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>5.9.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <version>1.9.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.9.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.0</version>
+            <scope>test</scope>
+        </dependency>
+
+
+
+        <!-- Selenium Dependencies -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+
+
+
+        <!-- Web Driver Manager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.3.0</version>
+        </dependency>
+
+        <!-- Apache Common -->
+        <dependency>
+            <groupId>org.apache.directory.studio</groupId>
+            <artifactId>org.apache.commons.io</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>3.0.12</version>
+            <type>pom</type>
+        </dependency>
+
     </dependencies>
+
+
     <build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <!--suppress UnresolvedMavenProperty -->
-            <version>${maven-surefire.version}</version>
-            <configuration>
-                <parallel>classes</parallel>
-                <forkCount>${surefire.forkCount}</forkCount>
-                <threadCount>${surefire.threadCount}</threadCount>
-                <reuseForks>${surefire.reuseForks}</reuseForks>
-                <failIfNoTests>false</failIfNoTests>
-                <systemPropertyVariables>
-                    <!--<geb.build.baseUrl>${geb.test.baseUrl}</geb.build.baseUrl> -->
-                    <geb.build.reportsDir>target/test-reports/geb</geb.build.reportsDir>
-                    <geb.env>chrome</geb.env>
-                    <geb.firefoxBinary></geb.firefoxBinary>
-                    <geb.chromeBinary></geb.chromeBinary>
-                    <geb.os.name>win</geb.os.name>
-                    <geb.defaultTimeout>120</geb.defaultTimeout>
-                    <xvfb.screen>${xvfb.screen}</xvfb.screen>
-                </systemPropertyVariables>
-                <includes>
-                    <include>${geb.test.include}</include>
-                </includes>
-                <excludes>
-                    <exclude>${geb.test.exclude}</exclude>
-                </excludes>
-                <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
-
-
+        <finalName>Blood Pressure Calculator Selenium</finalName>
+        <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M7</version>
+                <configuration>
+                <properties>
+                    <includes>
+                    <include>**/*Test.java</include>
+                    </includes>
+                </properties>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.groovy.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.5</version>
+                <configuration>
+                    <properties>
+                        <includes>
+                            <include>**/*Test.groovy</include>
+                        </includes>
+                    </properties>
+                </configuration>
+            </plugin>
+        </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
