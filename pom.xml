@@ -135,7 +135,7 @@
 
 
     <build>
-        <finalName>Blood Pressure Calculator Selenium</finalName>
+        <finalName>Blood Pressure Calculator Selenium 02</finalName>
         <pluginManagement>
         <plugins>
             <plugin>
