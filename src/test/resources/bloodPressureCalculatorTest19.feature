@@ -15,7 +15,7 @@ Feature: Boundary Value Analysis Testing
 
     Examples:
       | Systolic | Diastolic | AgeValue | Result                  | AGE                                                | MAP                         | PP                 |
-      | 70       | 40        | 15       | Low Blood Pressure      | Average value for your age group [15-19] is 120/78 | Mean Arterial Pressure: 150 | Pulse Pressure: 41 |
+      | 70       | 40        | 15       | Low Blood Pressure      | Average value for your age group [15-19] is 120/78 | Mean Arterial Pressure: 96   | Pulse Pressure: 41 |
       | 90       | 60        | 20       | Ideal Blood Pressure    | Average value for your age group [20-24] is 120/79 | Mean Arterial Pressure: 130 | Pulse Pressure: 31 |
       | 140      | 80        | 25       | Pre-High Blood Pressure | Average value for your age group [25-29] is 121/80 | Mean Arterial Pressure: 193 | Pulse Pressure: 61 |
       | 180      | 100       | 30       | High Blood Pressure     | Average value for your age group [30-34] is 123/82 | Mean Arterial Pressure: 246 | Pulse Pressure: 81 |
