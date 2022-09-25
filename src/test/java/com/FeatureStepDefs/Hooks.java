@@ -1,4 +1,4 @@
-package FeatureStepDefs;
+package com.FeatureStepDefs;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

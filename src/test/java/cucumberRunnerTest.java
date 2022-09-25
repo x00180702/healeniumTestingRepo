@@ -6,8 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         monochrome = true,
         features="src/test/resources/",
-        glue = "FeatureStepDefs",
-        stepNotifications = true,
+        glue = {"com.FeatureStepDefs"},
         tags= "@bpTest"
 
 )
