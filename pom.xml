@@ -174,7 +174,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>cucumberReporting</projectName>
+                            <projectName>Blood Pressure Calculator</projectName>
                             <skip>false</skip>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <inputDirectory>${project.build.directory}</inputDirectory>
