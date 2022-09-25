@@ -150,21 +150,9 @@
                 <configuration>
                 <properties>
                     <includes>
-                    <include>**/*Test.java</include>
+                    <include>**/cucumberRunnerTest*.java</include>
                     </includes>
                 </properties>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.groovy.gmaven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <version>1.5</version>
-                <configuration>
-                    <properties>
-                        <includes>
-                            <include>**/*Test.groovy</include>
-                        </includes>
-                    </properties>
                 </configuration>
             </plugin>
         </plugins>

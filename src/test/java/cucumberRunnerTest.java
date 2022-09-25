@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         features="src/test/resources/",
         glue = "FeatureStepDefs",
         stepNotifications = true,
-        tags= "@test1"
+        tags= "@bpTest"
 
 )
 
