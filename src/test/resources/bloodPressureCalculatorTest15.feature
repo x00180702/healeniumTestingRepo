@@ -11,4 +11,3 @@ Feature: Invalid (double) values
     Then "The value '172.5' is not valid for Systolic." data validation message is displayed under the "Systolic" field on the 'Blood Pressure' calculator page
     Then "The value '66.5' is not valid for Diastolic." data validation message is displayed under the "Diastolic" field on the 'Blood Pressure' calculator page
     Then "The value '18.2' is not valid for Age." data validation message is displayed under the "Age" field on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page

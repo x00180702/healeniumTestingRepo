@@ -11,4 +11,3 @@ Feature: Out of range age value
     Then "Invalid Systolic Value" error message is displayed under the "Systolic" field on the 'Blood Pressure' calculator page
     Then "Invalid Diastolic Value" error message is displayed under the "Diastolic" field on the 'Blood Pressure' calculator page
     Then "Invalid Age Range. Calculations are for ages over 15 & under 100" error message is displayed under the "Age" field on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page

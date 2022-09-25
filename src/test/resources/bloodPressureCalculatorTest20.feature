@@ -9,7 +9,6 @@ Feature: Multiple Scenarios in 1 Script
     When user enters "40" in the Age field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
     Then "Low Blood Pressure" results are displayed on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page
 
   Scenario: Multi-Test Case 2
 
@@ -19,7 +18,6 @@ Feature: Multiple Scenarios in 1 Script
     When user enters "20" in the Age field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
     Then "Ideal Blood Pressure" results are displayed on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page
 
   Scenario: Multi-Test Case 3
 
@@ -29,7 +27,6 @@ Feature: Multiple Scenarios in 1 Script
     When user enters "55" in the Age field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
     Then "Pre-High Blood Pressure" results are displayed on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page
 
   Scenario: Multi-Test Case 4
 
@@ -39,4 +36,3 @@ Feature: Multiple Scenarios in 1 Script
     When user enters "80" in the Age field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
     Then "High Blood Pressure" results are displayed on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page

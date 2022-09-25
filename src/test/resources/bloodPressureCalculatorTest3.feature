@@ -9,4 +9,3 @@ Feature: Ideal Blood Pressure
     When user enters "60" in the Age field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
     Then "Ideal Blood Pressure" results are displayed on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page

@@ -11,4 +11,3 @@ Feature: Empty Age field
     Then "The Systolic field is required." error message is displayed under the "Systolic" field on the 'Blood Pressure' calculator page
     Then "The Diastolic field is required." error message is displayed under the "Diastolic" field on the 'Blood Pressure' calculator page
     Then "The Age field is required." error message is displayed under the "Age" field on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page

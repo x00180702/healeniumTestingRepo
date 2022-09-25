@@ -12,4 +12,3 @@ Feature: Check Pulse Pressure
     Then "Average value for your age group [45-49] is 127/84" results are displayed under the 'Age' Label on the 'Blood Pressure' calculator page
     Then "Mean Arterial Pressure: 150" results are displayed under the 'Mean Arterial Pressure' Label on the 'Blood Pressure' calculator page
     Then "Pulse Pressure: 41" results are displayed under the 'Pulse Pressure' Label on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page

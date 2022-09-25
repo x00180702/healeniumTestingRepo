@@ -10,4 +10,3 @@ Feature: Check Privacy Tab
     When user clicks on the 'Home' tab on the 'Blood Pressure' calculator page
     Then 'BP Category Calculator' header is displayed on the Home Tab on the 'Blood Pressure' calculator page
     Then '© 2020 - BPCalculator - Privacy' footer is displayed on the Home Tab on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page

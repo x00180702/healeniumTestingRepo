@@ -83,7 +83,7 @@ public void results_are_not_displayed_on_the_calculator_page(String expectedResu
 }
 
 @Then("{string} error message is displayed under the {string} field on the {string} calculator page")
-    public void get_error_result(String expectedResults, String field){
+    public void get_error_result(String expectedResults, String field, String f2){
     webForm = new WebFromActions();
     String actualValue = webForm.getFieldValues(field);
     Assert.assertEquals("Compared values are not equal", expectedResults, actualValue);
@@ -97,7 +97,7 @@ public void results_are_not_displayed_on_the_calculator_page(String expectedResu
 }
 
 @Then("{string} data validation message is displayed under the {string} field on the {string} calculator page")
-    public void get_error_result3(String expectedResults, String field){
+    public void get_error_result3(String expectedResults, String field, String f2){
     webForm = new WebFromActions();
     String actualValue = webForm.getFieldErrors(field);
     Assert.assertEquals("Compared values are not equal", expectedResults, actualValue);

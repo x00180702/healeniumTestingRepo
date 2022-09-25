@@ -9,4 +9,3 @@ Feature: Equal Values Error
     When user enters "20" in the Age field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
     Then 'Systolic must be greater than Diastolic' error message is displayed on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page

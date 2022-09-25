@@ -11,4 +11,3 @@ Feature: Invalid (char) values
     Then "Please enter a valid number." data validation message is displayed under the "Systolic" field on the 'Blood Pressure' calculator page
     Then "Please enter a valid number." data validation message is displayed under the "Diastolic" field on the 'Blood Pressure' calculator page
     Then "Please enter a valid number." data validation message is displayed under the "Age" field on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page
