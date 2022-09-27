@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         features="src/test/resources/",
         glue = {"com.FeatureStepDefs"},
+        plugin = {"json:target/cucumber.cucumber.json"},
         tags= "@bpTest",
         publish = true
 

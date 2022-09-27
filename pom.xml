@@ -179,6 +179,7 @@
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
+                                <parm>**/*.json</parm>
                                 <mergeFeaturesById>false</mergeFeaturesById>
                                 <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
                                 <checkBuildResult>false</checkBuildResult>
