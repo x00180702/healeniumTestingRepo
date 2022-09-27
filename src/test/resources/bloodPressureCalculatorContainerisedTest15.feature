@@ -16,4 +16,3 @@ Feature: Invalid (double) values
     When user enters "66" in the Diastolic field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
     Then "Please enter a valid value. The two nearest values are 18 and 19." error message is displayed under the "Age" field on the 'Blood Pressure Containerised' calculator page
-    And user closes the 'Blood Pressure' calculator page

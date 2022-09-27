@@ -16,4 +16,3 @@ Feature: Out of range values
     When user enters "99" in the Age field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
     Then "Invalid Diastolic Value - too high. Please enter value below 190" error message is displayed on the 'Blood Pressure Containerised' calculator page
-    And user closes the 'Blood Pressure' calculator page

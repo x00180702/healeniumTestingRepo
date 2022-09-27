@@ -13,7 +13,7 @@ Feature: Boundary Value Analysis Testing
     Then "<AGE>" results are displayed under the 'Age' Label on the 'Blood Pressure' calculator page
     Then "<MAP>" results are displayed under the 'Mean Arterial Pressure' Label on the 'Blood Pressure' calculator page
     Then "<PP>" results are displayed under the 'Pulse Pressure' Label on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page
+
 
     Examples:
       | Email                         | Systolic | Diastolic | AgeValue | Result                  | AGE                                                | MAP                         | PP                 |

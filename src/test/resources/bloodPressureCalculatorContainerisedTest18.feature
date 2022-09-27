@@ -13,7 +13,7 @@ Feature: Check using scenario outline - Negative Test
     Then "<AGE>" results are not displayed under the 'Age' Label on the 'Blood Pressure' calculator page
     Then "<MAP>" results are not displayed under the 'Mean Arterial Pressure' Label on the 'Blood Pressure' calculator page
     Then "<PP>" results are not displayed under the 'Pulse Pressure' Label on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page
+
 
 
     Examples:

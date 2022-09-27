@@ -22,4 +22,3 @@
     When user enters "101" in the Age field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
     Then "Invalid Age Range. Calculations are for ages over 15 & under 100" error message is displayed on the 'Blood Pressure Containerised' calculator page
-    And user closes the 'Blood Pressure' calculator page

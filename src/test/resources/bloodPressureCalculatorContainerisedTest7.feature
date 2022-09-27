@@ -12,4 +12,3 @@ Feature: Empty Field
     When user enters "120" in the Systolic field on the 'Blood Pressure' calculator page
     Then "Please fill in this field." error message is displayed under the "Diastolic" field on the 'Blood Pressure Containerised' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
-    And user closes the 'Blood Pressure' calculator page
