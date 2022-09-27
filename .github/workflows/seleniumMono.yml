@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Selenium Testing on Monolith Application
 on:
   push:
     branches: [ main ]
@@ -19,7 +19,7 @@ jobs:
     - run: chrome --version
     
     - name: Build with Maven
-      run: mvn clean test -Dcucumber.options="--tags @bpTest"
+      run: mvn clean test -D"cucumber.filter.tags=@bpTest"
       
     - uses: actions/upload-artifact@v2
       with:
