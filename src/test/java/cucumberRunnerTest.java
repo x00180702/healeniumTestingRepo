@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         features="src/test/resources/",
         glue = {"com.FeatureStepDefs"},
         plugin = {"json:target/cucumber.json",
-                  "html:target/target/cucumber-html-report.html"},
+                  "html:target/target/cucumber-html-report.html", "pretty"},
         tags = "@bpTest or @bpcTest",
         publish = true
 
