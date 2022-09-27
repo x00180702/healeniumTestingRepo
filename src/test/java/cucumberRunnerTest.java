@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
         glue = {"com.FeatureStepDefs"},
         plugin = {"json:target/cucumber.json",
                   "html:target/target/cucumber-html-report.html"},
-        tags= "@bpTest",
         publish = true
 
 
