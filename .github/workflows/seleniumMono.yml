@@ -20,3 +20,8 @@ jobs:
     
     - name: Build with Maven
       run: mvn clean test -Dcucumber.options="--tags @bpTest"
+      
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cucumber report
+        path: cucumber.cucumber.json  
