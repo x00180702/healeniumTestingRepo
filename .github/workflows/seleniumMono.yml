@@ -24,9 +24,9 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: cucumber report
-        path: "/target/cucumber.json"
+        path: "./target/cucumber.json"
         
     - uses: actions/upload-artifact@v2
       with:
         name: cucumber html report
-        path: /target//target/cucumber-html-report.html
+        path: ./target//target/cucumber-html-report.html
