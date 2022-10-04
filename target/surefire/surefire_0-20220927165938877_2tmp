@@ -1,0 +1,6 @@
+#surefire_0
+#Tue Sep 27 16:59:38 IST 2022
+basedir=/home/jgunter/IdeaProjects/bloodPressureSeleniumTesting
+idea.version=2022.2.1
+cucumber.filter.tags=@test1
+localRepository=/home/jgunter/.m2/repository

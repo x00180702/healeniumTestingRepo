@@ -194,7 +194,7 @@ public void results_are_not_displayed_on_the_calculator_page(String expectedResu
 }
 
 @Then("{string} error message is displayed on the 'Blood Pressure Containerised' calculator page")
-    public void get_bpcp_tab(String expectedResults, String string){
+    public void get_bpcp_tab(String expectedResults){
     webForm = new WebFromActions();
     String actualValue = webForm.getBloodPressureContainerErrorValues();
     Assert.assertEquals("Compared values are not equal", expectedResults, actualValue);
