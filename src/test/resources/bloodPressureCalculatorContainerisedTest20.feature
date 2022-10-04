@@ -19,7 +19,7 @@ Feature: Multiple Scenarios in 1 Script
     When user enters "40" in the Diastolic field on the 'Blood Pressure' calculator page
     When user enters "20" in the Age field on the 'Blood Pressure' calculator page
     Then user clicks on the submit button on the 'Blood Pressure' calculator page
-    Then "Ideal Blood Pressure" results are displayed on the 'Blood Pressure' calculator page
+    Then "Normal Blood Pressure" results are displayed on the 'Blood Pressure' calculator page
 
   Scenario: Multi-Test Case 3
 
