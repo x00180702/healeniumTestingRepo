@@ -89,7 +89,7 @@ public void results_are_not_displayed_on_the_calculator_page(String expectedResu
     Assert.assertEquals("Compared values are not equal", expectedResults, actualValue);
 }
 
-@Then("{string} error message is displayed under the {string} field on the 'Blood Pressure Containerised' calculator page")
+@Then("{string} error message is now displayed under the {string} field on the 'Blood Pressure Containerised' calculator page")
     public void get_error_result2(String expectedResults, String field){
     webForm = new WebFromActions();
     String actualValue = webForm.getContainerisedFieldValues(field);
