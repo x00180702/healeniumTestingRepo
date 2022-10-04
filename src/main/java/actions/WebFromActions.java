@@ -131,5 +131,13 @@ public class WebFromActions {
         return webFormLocators.getBPCError.getText();
     }
 
+    public String getBloodPressureContainerTableHeader(){
 
+        return webFormLocators.getTableHeader.getText();
+    }
+
+    public boolean getBloodPressureContainerTableBody(String body){
+
+        return webFormLocators.getTableBody.getText().contains(body);
+    }
 }

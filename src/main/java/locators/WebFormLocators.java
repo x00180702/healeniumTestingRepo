@@ -60,5 +60,9 @@ public class WebFormLocators {
     @FindBy(xpath="//div[@name='error']")
     public WebElement getBPCError;
 
+    @FindBy(xpath="//div[@id='logoTable']")
+    public WebElement getTableHeader;
 
+    @FindBy(xpath="//div[@id='results']")
+    public WebElement getTableBody;
 }

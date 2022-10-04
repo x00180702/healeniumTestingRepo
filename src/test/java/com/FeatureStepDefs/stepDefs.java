@@ -200,4 +200,26 @@ public void results_are_not_displayed_on_the_calculator_page(String expectedResu
     Assert.assertEquals("Compared values are not equal", expectedResults, actualValue);
 }
 
+@Then("'Your Previous Readings' header is displayed on the Table 'Blood Pressure Containerised' calculator page")
+public void get_BloodPressureContainer_TableHeader(){
+    webForm = new WebFromActions();
+    String actualValue = webForm.getBloodPressureContainerTableHeader();
+    Assert.assertEquals("Compared values are not equal", "Your Previous Readings", actualValue);
+}
+
+@Then("{string} is displayed on Table on the the 'Blood Pressure Containerised' calculator page")
+public void get_BloodPressureContainer_TableBody(String expectedResults){
+    webForm = new WebFromActions();
+    Assert.assertTrue("Compared values are not equal", webForm.getBloodPressureContainerTableBody(expectedResults));
+
+}
+
+@Then("{string} is not displayed on Table on the the 'Blood Pressure Containerised' calculator page")
+public void get_BloodPressureContainer_Not_TableBody(String expectedResults){
+    webForm = new WebFromActions();
+    Assert.assertFalse("Compared values are not equal", webForm.getBloodPressureContainerTableBody(expectedResults));
+
+}
+
+
 }
