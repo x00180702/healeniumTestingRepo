@@ -169,7 +169,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <sourceJsonReportDirectory>${project.build.directory}/*.json</sourceJsonReportDirectory>
+                    <sourceJsonReportDirectory>${project.build.directory}/cucumber-report/json</sourceJsonReportDirectory>
                     <generatedHtmlReportDirectory>${project.build.directory}/cluecumber-report</generatedHtmlReportDirectory>
                 </configuration>
             </plugin>
