@@ -169,8 +169,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <sourceJsonReportDirectory>${project.build.directory}</sourceJsonReportDirectory>
-                    <generatedHtmlReportDirectory>${project.build.directory}</generatedHtmlReportDirectory>
+                    <sourceJsonReportDirectory>${project.build.directory}/*.json</sourceJsonReportDirectory>
+                    <generatedHtmlReportDirectory>${project.build.directory}/cluecumber-report</generatedHtmlReportDirectory>
                 </configuration>
             </plugin>
         </plugins>
