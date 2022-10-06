@@ -22,14 +22,19 @@ jobs:
     - name: Build with Maven
       run: mvn clean test -D"cucumber.filter.tags=@bpTest"
      
-    - name: Publish Cucumber Json   
+     
     - uses: actions/upload-artifact@v2
       with:
         name: cucumber report
         path: "./target/cucumber.json"
     
-    - name: Publish Cucumber HTML 
+     
     - uses: actions/upload-artifact@v2
       with:
         name: cucumber html report
         path: "./target/target/cucumber-html-report.html"
+        
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cucumber html report
+        path: "./target/target/cucumber-report/cucumber.json"
