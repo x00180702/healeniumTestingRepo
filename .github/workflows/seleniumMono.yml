@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
 
@@ -33,9 +33,3 @@ jobs:
       with:
         name: cucumber html report
         path: "./target/target/cucumber-html-report.html"
-   
-    - name: Publish Cuecumber Report
-    - uses: actions/upload-artifact@v2
-      with:
-        name: cucumber html report
-        path: "./target/target/cucumber-report/cucumber.json"
