@@ -40,3 +40,8 @@ jobs:
       with:
         name: cucumber html report
         path: "./target/generated-report/index.html"
+        
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cucumber html report2
+        path: "./target/generated-report/"
