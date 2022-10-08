@@ -1,11 +1,11 @@
 name: Selenium Testing on Monolith Application
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  schedule:
-    - cron: '0/15 9-18 * * *'
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
+#   schedule:
+#     - cron: '0/15 9-18 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
