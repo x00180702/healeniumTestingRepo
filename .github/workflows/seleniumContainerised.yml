@@ -1,5 +1,9 @@
 name: Selenium Testing on Containerised Application
 on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
   schedule:
     - cron: '1 8-18 * * *'
 jobs:
