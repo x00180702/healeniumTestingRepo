@@ -1,7 +1,7 @@
 name: Selenium Testing on Containerised Application
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 9-18 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
