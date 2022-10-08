@@ -1,9 +1,5 @@
 name: Selenium Testing on Monolith Application
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
   schedule:
     - cron: '0 9-18 * * *'
 jobs:
