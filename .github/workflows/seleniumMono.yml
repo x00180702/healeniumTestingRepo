@@ -1,5 +1,6 @@
 name: Selenium Testing on Monolith Application
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
   pull_request:
