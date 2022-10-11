@@ -1,11 +1,12 @@
 name: Selenium Testing on Containerised Application
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '05,17,47 15-21 * * *'
+    - cron: '05,17,47 15-22 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
