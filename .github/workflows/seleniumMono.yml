@@ -1,10 +1,6 @@
 name: Selenium Testing on Monolith Application
-# on:
-#   workflow_dispatch:
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
+on:
+  workflow_dispatch:
 #   schedule:
 #     - cron: '01,20,30,40 13-17 * * *'
 jobs:
