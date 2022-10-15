@@ -2,7 +2,7 @@ name: Selenium Testing on Monolith Application
 on:
   workflow_dispatch:
   schedule:
-    - cron: '01,06 01-06 * * *'
+    - cron: '05/15 10-15 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
