@@ -17,6 +17,9 @@ jobs:
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
     
+    - name: curl yaml
+    - run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml"
+    
 #     - name: Start containers
 #       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
       
