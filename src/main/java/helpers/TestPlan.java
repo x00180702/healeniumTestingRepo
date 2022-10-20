@@ -35,7 +35,7 @@ public class TestPlan {
         }
     }
 
-    public static WebDriver getDriver(){
+    public static SelfHealingDriver getDriver(){
         return driver;
     }
 
