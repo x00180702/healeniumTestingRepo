@@ -131,6 +131,13 @@
             <type>pom</type>
         </dependency>
 
+        <!-- Healenium -->
+        <dependency>
+            <groupId>com.epam.healenium</groupId>
+            <artifactId>healenium-web</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
     </dependencies>
 
 

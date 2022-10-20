@@ -176,5 +176,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.testng:testng:7.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.webjars:jquery:3.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-xml:3.0.12" level="project" />
+    <orderEntry type="library" name="Maven: com.epam.healenium:healenium-web:3.3.0" level="project" />
   </component>
 </module>

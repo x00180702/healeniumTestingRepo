@@ -1,5 +1,6 @@
 package helpers;
 
+import com.epam.healenium.SelfHealingDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,7 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestPlan {
 
     private static TestPlan testPlan;
-    private static WebDriver driver;
+    private static SelfHealingDriver driver;
     private static WebDriverWait wait;
     public final static int TIMEOUT = 10;
 
@@ -20,7 +21,8 @@ public class TestPlan {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+        WebDriver delegate = new ChromeDriver(options);
+        driver = SelfHealingDriver.create(delegate);
         //driver.manage().window().maximize();
     }
 
