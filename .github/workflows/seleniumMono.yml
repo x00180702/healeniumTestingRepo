@@ -17,11 +17,11 @@ jobs:
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
     
-    - name: Start containers
-      run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
+#     - name: Start containers
+#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
       
-    - name: Start containers 2
-      run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
+#     - name: Start containers 2
+#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
  
     - name: Start containers 3
       run: docker-compose up -d
