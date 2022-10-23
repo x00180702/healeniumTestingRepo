@@ -21,7 +21,7 @@ public class TestPlan {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
-        WebDriver delegate = new ChromeDriver();
+        WebDriver delegate = new ChromeDriver(options);
         driver = SelfHealingDriver.create(delegate);
         //driver.manage().window().maximize();
     }
