@@ -47,7 +47,7 @@ jobs:
       run: docker-compose  -f infra/docker-compose.yaml up -d
 
     - name: Build the Docker image
-      run: docker build . -f infra/docker-compose.yaml --tag healenium/healenium-test:$(date +%s)
+      run: docker build . -f infra/docker-compose.yaml --tag healenium/healenium-test:latest
       
     - name: Docker Push
       run: docker push healenium/healenium-test
