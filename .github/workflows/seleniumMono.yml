@@ -31,6 +31,10 @@ jobs:
 #     - name: Start containers 2
 #       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
 
+    - name: Check ls
+      run: |
+          cd ls
+          
     - name: Setup Symfony
       run: |
           cd healeniumTestingRepo/infra/
