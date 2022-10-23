@@ -36,7 +36,7 @@ jobs:
 #       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
  
     - name: Start containers 3
-      run: docker-compose -f "healeniumTestingRepo/infra/docker-compose.yaml" up -d
+      run: docker-compose -f healeniumTestingRepo/infra/docker-compose.yaml up -d
       
     - name: Start containers 4
       run: docker ps
