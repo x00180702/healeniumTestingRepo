@@ -13,7 +13,13 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-          
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_LOGIN }}
+
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
     
@@ -23,11 +29,11 @@ jobs:
     - name: curl yaml2
       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
     
-#     - name: Start containers
-#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
+    - name: Start containers
+      run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
       
-#     - name: Start containers 2
-#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
+    - name: Start containers 2
+      run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
  
     - name: Start containers 3
       run: docker-compose up -d
