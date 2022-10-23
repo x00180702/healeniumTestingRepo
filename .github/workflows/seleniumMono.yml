@@ -41,6 +41,12 @@ jobs:
     - name: Start containers 4
       run: docker ps
       
+    - name: Build and push
+      uses: docker/build-push-action@v3
+      with:
+        push: true
+        tags: user/app:latest      
+      
     - name: Build with Maven
       run: mvn clean test -D"cucumber.filter.tags=@test1"
      
