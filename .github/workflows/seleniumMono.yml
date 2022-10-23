@@ -19,47 +19,22 @@ jobs:
         chrome-version: stable
 #     - run: chrome 
     
-#     - name: curl yaml
-#       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
+    - name: curl yaml
+      run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
       
-#     - name: curl yaml2
-#       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
-    
-#     - name: Start containers
-#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
-      
-#     - name: Start containers 2
-#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
+    - name: curl yaml2
+      run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
 
-    - name: Check ls
-      run: |
-           ls
-          
-    - name: Setup Symfony
-      run: |
-          cd infra
-  
-    - name: Check ls 2
-      run: |
-           ls
 
     - name: Start containers 3
       run: docker-compose  -f infra/docker-compose.yaml up -d
-
-    - name: Build the Docker image
-      run: docker build . -f infra/docker-compose.yaml --tag healenium/healenium-test:latest
-      
-    - name: Docker Push
-      run: docker push healenium/healenium-test
       
     - name: Start containers 4
       run: docker ps
       
     - name: Build with Maven
       run: mvn clean test -D"cucumber.filter.tags=@test1"
-      
-    - name: Start containers 6
-      run: docker ps
+
      
     - name: Build Clucucmber Report
       run: mvn cluecumber-report:reporting
