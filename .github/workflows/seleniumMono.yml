@@ -14,8 +14,8 @@ jobs:
       with:
         java-version: 11
           
-    - uses: browser-actions/setup-chrome@latest
-    - run: chrome --latest
+    - uses: browser-actions/setup-chrome@9268f493a778b892631b6e6ca8bd6f7642c1d863
+    - run: chrome 
     
 #     - name: curl yaml
 #       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
