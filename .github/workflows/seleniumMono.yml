@@ -14,7 +14,9 @@ jobs:
       with:
         java-version: 11
           
-    - uses: browser-actions/setup-chrome@9268f493a778b892631b6e6ca8bd6f7642c1d863
+    - uses: browser-actions/setup-chrome@latest
+      with:
+        chrome-version: stable
     - run: chrome 
     
 #     - name: curl yaml
