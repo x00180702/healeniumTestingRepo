@@ -24,7 +24,7 @@ jobs:
     - run: chrome --version
     
     - name: Build with Maven
-      run: mvn install
+      run: mvn install -DskipTests
       
     - name: curl yaml
       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
