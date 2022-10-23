@@ -41,12 +41,15 @@ jobs:
     - name: Start containers 4
       run: docker ps
       
-    - name: Build and push
-      uses: docker/build-push-action@v3
-      with:
-        context: .
-        push: true
-        tags: healenium/app:latest      
+    - name: docker push
+      run: docker push jgunt25/healenium_masters:latest
+      
+#     - name: Build and push
+#       uses: docker/build-push-action@v3
+#       with:
+#         context: .
+#         push: true
+#         tags: healenium/app:latest      
       
     - name: Build with Maven
       run: mvn clean test -D"cucumber.filter.tags=@test1"
