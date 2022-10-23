@@ -42,7 +42,7 @@ jobs:
       run: docker ps
       
     - name: docker push
-      run: docker push docker.io/jgunt25/healenium_masters/postgres:11-alpine:latest
+      run: docker push docker.io/jgunt25/healenium_masters/postgres:11-alpine
       
 #     - name: Build and push
 #       uses: docker/build-push-action@v3
