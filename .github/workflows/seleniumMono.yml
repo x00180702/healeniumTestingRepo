@@ -37,7 +37,7 @@ jobs:
           
     - name: Setup Symfony
       run: |
-          cd healeniumTestingRepo/infra/
+          cd infra
           
     - name: Start containers 3
       run: docker-compose up -d
