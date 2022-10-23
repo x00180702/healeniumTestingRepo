@@ -38,7 +38,11 @@ jobs:
     - name: Setup Symfony
       run: |
           cd infra
-          
+  
+    - name: Check ls 2
+      run: |
+           ls
+
     - name: Start containers 3
       run: docker-compose up -d
       
