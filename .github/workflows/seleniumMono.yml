@@ -22,21 +22,18 @@ jobs:
 
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
-    
-    - name: Build with Maven
-      run: mvn install -DskipTests
-      
+
     - name: curl yaml
       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
       
-#     - name: curl yaml2
-#       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
+    - name: curl yaml2
+      run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
     
-#     - name: Start containers
-#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
+    - name: Start containers
+      run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
       
-#     - name: Start containers 2
-#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
+    - name: Start containers 2
+      run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
  
     - name: Start containers 3
       run: docker-compose -f healeniumTestingRepo/infra/docker-compose.yaml up -d
