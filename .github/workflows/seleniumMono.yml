@@ -13,21 +13,15 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-
-    - name: Login to Docker Hub
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_LOGIN }}
-
+          
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
-
-#     - name: curl yaml
-#       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
+    
+    - name: curl yaml
+      run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
       
-#     - name: curl yaml2
-#       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
+    - name: curl yaml2
+      run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
     
 #     - name: Start containers
 #       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
@@ -35,15 +29,12 @@ jobs:
 #     - name: Start containers 2
 #       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
  
-#     - name: Start containers 3
-#       run: docker-compose -f healeniumTestingRepo/infra/docker-compose.yaml up -d
-
-    - name: Start containers 3a
-      run: sudo docker-compose up -d
+    - name: Start containers 3
+      run: docker-compose up -d
       
     - name: Start containers 4
       run: docker ps
-
+      
     - name: Build with Maven
       run: mvn clean test -D"cucumber.filter.tags=@test1"
      
@@ -70,9 +61,3 @@ jobs:
       with:
         name: cucumber html report2
         path: "./target/generated-report/"
-        
-#     - name: Build and push
-#       uses: docker/build-push-action@v3
-#       with:
-#         context: .
-#         push: true
