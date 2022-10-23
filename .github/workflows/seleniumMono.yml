@@ -23,14 +23,14 @@ jobs:
 #     - name: curl yaml2
 #       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
     
-#     - name: Start containers
-#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
+    - name: Start containers
+      run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" up -d --build
       
-#     - name: Start containers 2
-#       run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
+    - name: Start containers 2
+      run: docker-compose -f "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" up -d --build
  
-    - name: Start containers 3
-      run: docker-compose up -d
+#     - name: Start containers 3
+#       run: docker-compose up -d
       
 #     - name: Start containers 4
 #       run: docker ps
