@@ -33,7 +33,7 @@ jobs:
 
     - name: Check ls
       run: |
-          cd ls
+           ls
           
     - name: Setup Symfony
       run: |
