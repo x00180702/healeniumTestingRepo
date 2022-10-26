@@ -137,6 +137,12 @@
             <artifactId>healenium-web</artifactId>
             <version>3.3.0</version>
         </dependency>
+        <!-- Percy -->
+        <dependency>
+            <groupId>io.percy</groupId>
+            <artifactId>percy-java-selenium</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
     </dependencies>
 

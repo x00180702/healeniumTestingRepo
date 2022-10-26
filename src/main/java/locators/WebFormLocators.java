@@ -1,5 +1,6 @@
 package locators;
 
+import io.percy.selenium.Percy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -65,4 +66,5 @@ public class WebFormLocators {
 
     @FindBy(xpath="//div[@id='results']")
     public WebElement getTableBody;
+
 }

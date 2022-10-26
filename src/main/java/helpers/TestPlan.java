@@ -1,6 +1,7 @@
 package helpers;
 
 import com.epam.healenium.SelfHealingDriver;
+import io.percy.selenium.Percy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,6 +16,7 @@ public class TestPlan {
     private static SelfHealingDriver driver;
     private static WebDriverWait wait;
     public final static int TIMEOUT = 10;
+    private static Percy percy;
 
     private TestPlan(){
         WebDriverManager.chromedriver().setup();
@@ -30,8 +32,10 @@ public class TestPlan {
     public static void submitForm(String bpOrbpc) {
         if(bpOrbpc.equals("Blood Pressure")){
             driver.get(Utils.BASE_URL);
+            percy.snapshot("BP monolith");
         }else {
             driver.get(Utils.BASE_URL1);
+            percy.snapshot("BP container");
         }
     }
 

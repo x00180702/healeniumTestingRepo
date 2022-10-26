@@ -1,6 +1,7 @@
 package actions;
 
 import helpers.TestPlan;
+import io.percy.selenium.Percy;
 import locators.WebFormLocators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,7 @@ import static helpers.TestPlan.getDriver;
 
 public class WebFromActions {
 
+    private static Percy percy;
      WebFormLocators webFormLocators = null;
 
     public WebFromActions(){
@@ -22,7 +24,9 @@ public class WebFromActions {
         webFormLocators.systolic.sendKeys(arg1);
     }
 
-
+    public void percyScreenShot(String shotName){
+        percy.snapshot("");
+    }
 
     public void inputDiastolic(String arg1){
         webFormLocators.diastolic.clear();

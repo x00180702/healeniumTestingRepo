@@ -11,7 +11,9 @@ public class stepDefs {
 WebFromActions webForm = new WebFromActions();
 @Given("user goes to the {string} application")
 public void user_goes_to_the_application(String string) {
-TestPlan.submitForm(string);
+
+    TestPlan.submitForm(string);
+    webForm.percyScreenShot("login");
 }
 
 @When("user enters {string} in the Systolic field on the {string} calculator page")
@@ -42,6 +44,7 @@ public void user_enters_in_the_email_field_on_the_calculator_page(String string,
 public void user_clicks_on_the_submit_button_on_the_calculator_page(String string) {
     webForm = new WebFromActions();
     webForm.pressSubmitButton();
+    webForm.percyScreenShot("submitButton");
 }
 
 @Then("{string} results are displayed on the {string} calculator page")
