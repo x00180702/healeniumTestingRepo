@@ -37,8 +37,8 @@ jobs:
       
     - name: Build with Maven
       run: npx percy exec -- mvn clean test -D"cucumber.filter.tags=@test1"
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      env:
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
      
     - name: Build Clucucmber Report
       run: mvn cluecumber-report:reporting
