@@ -32,9 +32,13 @@ jobs:
     - name: Start containers 4
       run: docker ps
       
+    - name: App Percy
+      run: npm install --save-dev @percy/cli
+      
     - name: Build with Maven
-      run: mvn clean test -D"cucumber.filter.tags=@test1"
-
+      run: npx percy exec -- mvn clean test -D"cucumber.filter.tags=@test1"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
      
     - name: Build Clucucmber Report
       run: mvn cluecumber-report:reporting
