@@ -25,7 +25,8 @@ public class WebFromActions {
     }
 
     public void percyScreenShot(String shotName){
-        percy.snapshot("");
+        percy = new Percy(TestPlan.getDriver());
+        percy.snapshot(shotName);
     }
 
     public void inputDiastolic(String arg1){

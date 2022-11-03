@@ -42,6 +42,8 @@ public class TestPlan {
         }
     }
 
+
+
     public static WebDriver getDriver(){
         return driver;
     }
