@@ -25,6 +25,7 @@ public class TestPlan {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        percy = new Percy(driver);
         //WebDriver delegate = new ChromeDriver(options);
         //driver = SelfHealingDriver.create(delegate);
         //driver.manage().window().maximize();
