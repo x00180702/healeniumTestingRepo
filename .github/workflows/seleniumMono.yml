@@ -1,8 +1,8 @@
 name: Selenium Testing on Monolith Application
 on:
   workflow_dispatch:
-#   schedule:
-#     - cron: '05/15 07-10 * * *'
+  schedule:
+    - cron: '05/15 19-21 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,11 +19,11 @@ jobs:
         chrome-version: stable
 #     - run: chrome 
     
-    - name: curl yaml
-      run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
+#     - name: curl yaml
+#       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
       
-    - name: curl yaml2
-      run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
+#     - name: curl yaml2
+#       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
 
 
     - name: Start containers 3
@@ -36,7 +36,7 @@ jobs:
       run: npm install --save-dev @percy/cli
       
     - name: Build with Maven
-      run: npx percy exec -- mvn clean test -D"cucumber.filter.tags=@test1"
+      run: npx percy exec -- mvn clean test -D"cucumber.filter.tags=@bpTest"
       env:
         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
      
