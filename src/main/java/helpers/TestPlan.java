@@ -13,7 +13,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestPlan {
 
     private static TestPlan testPlan;
-    private static SelfHealingDriver driver;
+    private static WebDriver driver;
+    //private static SelfHealingDriver driver;
     private static WebDriverWait wait;
     public final static int TIMEOUT = 10;
     private static Percy percy;
@@ -23,8 +24,9 @@ public class TestPlan {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
-        WebDriver delegate = new ChromeDriver(options);
-        driver = SelfHealingDriver.create(delegate);
+        driver = new ChromeDriver(options);
+        //WebDriver delegate = new ChromeDriver(options);
+        //driver = SelfHealingDriver.create(delegate);
         //driver.manage().window().maximize();
     }
 
@@ -39,7 +41,7 @@ public class TestPlan {
         }
     }
 
-    public static SelfHealingDriver getDriver(){
+    public static WebDriver getDriver(){
         return driver;
     }
 
