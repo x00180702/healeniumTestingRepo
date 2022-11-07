@@ -1,4 +1,4 @@
-name: Selenium Testing on Monolith Application
+name: Selenium Testing on Containerised Application
 on:
   workflow_dispatch:
   schedule:
