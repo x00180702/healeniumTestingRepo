@@ -1,0 +1,65 @@
+name: Selenium Testing on Monolith Application
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '05/15 15-17 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+
+    - uses: browser-actions/setup-chrome@latest
+      with:
+        chrome-version: stable
+#     - run: chrome 
+    
+#     - name: curl yaml
+#       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/docker-compose.yaml" -o docker-compose.yaml
+      
+#     - name: curl yaml2
+#       run: curl "https://raw.githubusercontent.com/healenium/healenium-client/master/example/init.sql" -o init.sql
+
+
+    - name: Start containers 3
+      run: docker-compose  -f infra/docker-compose.yaml up -d
+      
+    - name: Start containers 4
+      run: docker ps
+      
+    - name: App Percy
+      run: npm install --save-dev @percy/cli
+      
+    - name: Build with Maven
+      run: npx percy exec -- mvn clean test -D"cucumber.filter.tags=@bpcTest"
+      env:
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+     
+    - name: Build Clucucmber Report
+      run: mvn cluecumber-report:reporting
+      
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cucumber report
+        path: "./target/cucumber.json"
+    
+     
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cucumber html report
+        path: "./target/target/cucumber-html-report.html"
+        
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cucumber html report
+        path: "./target/generated-report/index.html"
+        
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cucumber html report2
+        path: "./target/generated-report/"
